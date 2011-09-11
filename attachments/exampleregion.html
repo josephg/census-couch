@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    
+    <title>Aus</title>
+    <link href="layout.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+    <script language="javascript" type="text/javascript" src="jquery-1.6.3.min.js"></script>
+    <script src="highcharts.js"></script>
+  </head>
+  <body>
+	<div class="container-fluid">
+    	<div class="sidebar">...</div>
+	    <div class="content">
+		  	<div class="row">
+				<div class="span4 columns">
+					<h2>Age</h2>
+				</div>
+				<div class="span12 columns">
+					<div id='agechart'>asdfdfs</div>
+				</div>
+			</div>
+	    </div>
+    </div>
+  </body>
+  
+  <script>
+  $(document).ready(function(){
+  	console.log('asdf');
+  	var options = {
+  		chart: {renderTo:'agechart'},
+  		title: {text:'Age'},
+  		subtitle: {text:'Source: ABS'},
+  		xAxis: {
+  			categories: ['a', 'b'],
+  			title: {text: 'cat1'}
+  		},
+  		yAxis: {
+  			min: 0,
+  			title: {
+  				text: 'cat2',
+  				align: 'high'
+  			}
+  		},
+  		tooltip: {
+  			formatter: function() {
+  				return '' + this.series.name + ': ' + this.y;
+  			}
+  		},
+  		plotOptions: {
+  			bar: {
+  				dataLabels: {enabled: true}
+  			}
+  		},
+  		series: [{
+  			name: 'foo',
+  			data: [1, 2, 3]
+  		}]
+  	};
+  	new Highcharts.Chart(options);
+  });
+  </script>
+</html>
