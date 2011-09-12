@@ -1,8 +1,10 @@
-This is a simple little couchapp to let people view census data in a standardish format.
+This is a simple little couchapp to let people view census data in a standardish format. Its not finished.
+
+The site is live here: http://sharejs.org:5984/census-mini/_design/app/index.html#/region/0
 
 It was done over a couple hackfests, so the code is a bit nasty.
 
-Visit #/region/REGIONID to see graphs for a given region.
+Visit `#/region/REGIONID` to see graphs for a given region.
 
 Deploy with:
 
